@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f4f3">
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F1F0"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:text="2月10日"
+            android:textColor="@color/color_66"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/match_game_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_tv"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

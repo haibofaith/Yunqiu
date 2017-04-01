@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/back_button_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/custom_back"/>
+
+        <TextView
+            android:id="@+id/back_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back_button_img"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:text=""
+            android:textColor="@color/color_63"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color_63"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/right_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        >
+
+
+        <TextView
+            android:id="@+id/right_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/color_green"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/right_button_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/add_icon"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

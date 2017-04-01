@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+    <com.kball.view.NonSwipableViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line1"
+        android:background="#ffffff"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_above="@+id/bottom_lin"
+        android:background="#e4e4e4"
+        />
+
+    <LinearLayout
+        android:id="@+id/bottom_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff3f3"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:id="@+id/yq_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/yq_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/yq_img_n"
+                />
+
+            <TextView
+                android:id="@+id/yq_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yq_img"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="云球"
+                android:textColor="#001D36"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bs_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/bs_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bs_img_p"
+                />
+
+            <TextView
+                android:id="@+id/bs_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bs_img"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="比赛"
+                android:textColor="#999999"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fx_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/fx_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/fx_img_p"
+                />
+
+            <TextView
+                android:id="@+id/fx_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fx_img"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="#999999"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/my_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/my_img_p"
+                />
+
+            <TextView
+                android:id="@+id/my_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_img"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="#999999"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

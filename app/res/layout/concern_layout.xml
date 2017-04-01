@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kball.function.Mine.custom.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></com.kball.function.Mine.custom.TitleView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/color_6c" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/qy_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="球员"
+            android:textColor="@color/color_63"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/qd_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="球队"
+            android:textColor="@color/color_63"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/qd_view"
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:layout_centerInParent="true"
+                android:background="@color/color_green" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/qy_view"
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:layout_centerInParent="true"
+                android:background="@color/color_green" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_BG" />
+
+    <com.kball.library.PullToRefreshListView
+        android:id="@+id/concern_qy_list"
+        xmlns:crm="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        crm:ptrAnimationStyle="flip"
+        crm:ptrMode="both"
+        android:scrollbars="none">
+
+    </com.kball.library.PullToRefreshListView>
+
+    <com.kball.library.PullToRefreshListView
+        android:id="@+id/concern_list"
+        xmlns:crm="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        crm:ptrAnimationStyle="flip"
+        crm:ptrMode="both"
+        android:scrollbars="none">
+
+    </com.kball.library.PullToRefreshListView>
+
+
+</LinearLayout>

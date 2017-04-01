@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/touxiang_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <View
+            android:id="@+id/zzc_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#70000000"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_tv"
+            android:layout_margin="10dp"
+            android:background="@drawable/y_login_edit_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paizhao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="拍照"
+                android:textColor="#0075fb"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#e1e1e1"/>
+
+            <TextView
+                android:id="@+id/xiangce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="从手机相册选择"
+                android:textColor="#0075fb"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bottom_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/y_login_edit_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="#0075fb"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/touxiang_rel">
+
+        <com.kball.function.Mine.custom.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </com.kball.function.Mine.custom.TitleView>
+
+        <com.kball.function.other.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:id="@+id/touxiang_id"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mine_photo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="设置头像"
+            android:textColor="@color/color_green"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:id="@+id/name_rlin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/phone_rlin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="姓名"
+                android:textColor="@color/color_63"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/name_title"
+                android:background="@drawable/small_dot"/>
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/name_title"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="填写真实姓名，以便队友找到你"
+                android:maxLines="1"
+                android:textColor="@color/color_63"
+                android:textColorHint="@color/color_6c"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_6c"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/code_rlin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/phone_rlin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/code_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="密码"
+                android:textColor="@color/color_63"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/code_title"
+                android:background="@drawable/small_dot"/>
+
+            <EditText
+                android:id="@+id/code_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/code_title"
+                android:layout_toLeftOf="@+id/biyan"
+                android:background="@null"
+                android:layout_marginRight="10dp"
+                android:hint="填写6-32位密码"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:textColor="@color/color_63"
+                android:textColorHint="@color/color_6c"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/biyan"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:padding="15dp"
+                android:src="@drawable/info_eye"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_6c"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/join_yunqiu_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/code_rlin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/join_yunqiu_bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="加入云球"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_home_bg"
+    android:orientation="vertical">
+    <com.kball.function.Mine.custom.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/title_view"></com.kball.function.Mine.custom.TitleView>
+    <ListView
+        android:id="@+id/team_list"
+        android:divider="@null"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>

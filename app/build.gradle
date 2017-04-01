@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '23.0.1'
+    defaultConfig {
+        applicationId "com.kball"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        debug{
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+    }
+    repositories {  //本地aar方式
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('key/release.jks')
+            storePassword 'Yunqiu20161208'
+            keyAlias 'yunqiu'
+            keyPassword 'Yunqiu20161208'
+        }
+
+    }
+
+
+    sourceSets {
+
+        main {
+            jniLibs.srcDirs = ['libs']
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile 'com.loopj.android:android-async-http:1.4.7'
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/MobCommons-2017.0216.1054.jar')
+    compile files('libs/MobTools-2017.0216.1054.jar')
+    compile files('libs/ShareSDK-Core-2.8.1.jar')
+    compile files('libs/ShareSDK-QQ-2.8.1.jar')
+    compile files('libs/ShareSDK-Wechat-2.8.1.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.8.1.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.8.1.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.8.1.jar')
+    compile files('libs/jcore-android_v1.1.1.jar')
+    compile files('libs/jpush-android_v3.0.3.jar')
+    compile 'com.upyun:upyun-android-sdk:2.0.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+}

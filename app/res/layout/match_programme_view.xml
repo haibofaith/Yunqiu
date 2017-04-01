@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/select_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/team_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/match_xl"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="队伍筛选"
+            android:textColor="@color/color_63"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/status_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/match_xl"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="状态筛选"
+            android:textColor="@color/color_63"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/time_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/match_xl"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="时间筛选"
+            android:textColor="@color/color_63"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@+id/select_lin"
+        android:background="@color/color_6c"/>
+
+
+    <com.kball.library.PullToRefreshListView
+        android:id="@+id/pull_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divide_line"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+    </com.kball.library.PullToRefreshListView>
+
+    <com.kball.library.PullToRefreshScrollView
+        android:id="@+id/refresh_lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divide_line"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/add_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        </LinearLayout>
+
+    </com.kball.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divide_line"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/no_data"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:text="还没有日程"
+            android:textColor="@color/color_66"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/creat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/yq_btn_green"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:text="创建比赛 ／ 活动"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+	<!-- meida option -->
+	<TextView
+		android:id="@+id/mediaOption"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:background="#000000"
+		android:text="@string/player_option"
+		android:textSize="24dp"
+		android:textColor="#FFFFFF"/>
+
+	<LinearLayout
+		android:id="@+id/mediaType"
+		android:layout_width="match_parent"
+		android:layout_height="43dp"
+		android:layout_below="@+id/mediaOption"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/livestreamBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="43dp"
+			android:layout_marginTop="0dp"
+			android:background="@null"
+			android:text="网络直播"
+			android:textSize="18dp"
+			android:textColor="#333333"
+			android:enabled="false"/>
+
+		<Button
+			android:id="@+id/videoOnDemandBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="43dp"
+			android:layout_marginTop="0dp"
+			android:background="@null"
+			android:text="视频点播"
+			android:textSize="18dp"
+			android:textColor="#333333"/>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/mediaTypeUnselected"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:layout_below="@+id/mediaType"
+		android:layout_marginTop="2dp"
+		android:src="@drawable/media_type_unselected"/>
+
+	<ImageView
+		android:id="@+id/mediaTypeSelected"
+		android:layout_width="match_parent"
+		android:layout_height="4dp"
+		android:layout_below="@+id/mediaType"
+		android:src="@drawable/media_type_selected"/>
+
+	<LinearLayout
+		android:id="@+id/mediaUrl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_below="@+id/mediaType">
+		<EditText
+			android:id="@+id/netVideoUrl"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+			android:layout_below="@+id/mediaType"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:text="http://mvvideo2.meitudata.com/5785a7e3e6a1b824.mp4"
+			android:background="@drawable/shape"
+			android:paddingLeft="13dp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:textColor="#333333"
+			android:textSize="20dp"
+			android:singleLine="true"
+			android:hint="请输入直播流地址：URL"/>
+		<Button
+			android:id="@+id/btnScan"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="20dp"
+			android:background="@drawable/qr_code"
+			/>
+
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:id="@+id/decoder_type"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/mediaUrl"
+		android:layout_marginTop="27dp" >
+
+		<RadioGroup
+			android:id="@+id/decoder_software"
+			android:layout_width="107dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dp"
+			android:layout_weight="1"
+			android:gravity="center">
+			<RadioButton
+				android:id="@+id/software"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="3dp"
+				android:text="软件解码"
+				android:textColor="#333333"
+				android:textSize="19dp"
+				android:checked="true"/>
+		</RadioGroup>
+
+		<RadioGroup
+			android:id="@+id/decoder_hardware"
+			android:layout_width="107dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="40dp"
+			android:layout_weight="1"
+			android:gravity="center">
+			<RadioButton
+				android:id="@+id/hardware"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="3dp"
+				android:textColor="#333333"
+				android:textSize="19dp"
+				android:text="硬件解码"/>
+		</RadioGroup>
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/play_button"
+		android:layout_width="match_parent"
+		android:layout_height="54dp"
+		android:layout_below="@+id/decoder_type"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="27dp"
+		android:text="播 放"
+		android:textColor="#FFFFFFFF"
+		android:textSize="19dp"
+		android:background="@drawable/ic_start_play"/>
+
+	<TextView
+		android:id="@+id/hardware_reminder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="硬件解码在Android 4.0以上版本才支持!\n在硬件解码条件下不支持截图!"
+		android:textColor="#BFBFBF"
+		android:textSize="17dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="17dp"
+		android:gravity="center"/>
+
+</RelativeLayout>

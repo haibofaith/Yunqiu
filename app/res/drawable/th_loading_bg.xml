@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- User: lizheng -->
+<!-- 加载框背景图 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp"/>
+    <gradient
+            android:startColor="#60000000"
+            android:centerColor="#60000000"
+            android:endColor="#60000000"
+            android:centerY="1"
+            android:angle="0"/>
+</shape>

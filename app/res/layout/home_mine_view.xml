@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_home_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/color_63"
+            android:id="@+id/league_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="参加联赛：0" />
+
+        <TextView
+            android:id="@+id/game_number"
+            android:textColor="@color/color_63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:padding="12dp"
+            android:text="参与场数：0" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white">
+
+        <com.kball.function.Mine.custom.CircleView
+            android:id="@+id/circle_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/circle_view"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/victory_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/victory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜(0)"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lose_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/lose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜(0)"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_blue" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/circle_view"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/flat_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/flat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜(0)"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_purple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/no_entry_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/no_entry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜(0)"
+                    android:textColor="@color/color_63"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_orange" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/jin_qiu_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进球    "
+            android:textColor="@color/color_66"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/jin_qiu_line"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/jin_qiu_id"
+            android:background="@color/color_blue" />
+
+        <TextView
+            android:id="@+id/jin_qiu_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/jin_qiu_line"
+            android:text="0"
+            android:textColor="@color/color_63"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/zhu_gong_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="助攻    "
+            android:textColor="@color/color_66"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/zhu_gong_line"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/zhu_gong_id"
+            android:background="@color/color_green" />
+
+        <TextView
+            android:id="@+id/zhu_gong_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/zhu_gong_line"
+            android:text="0"
+            android:textColor="@color/color_63"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/hong_huang_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红黄牌"
+            android:textColor="@color/color_66"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/hong_line"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/hong_huang_id"
+            android:background="@color/color_red" />
+
+        <View
+            android:id="@+id/huang_line"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/hong_line"
+            android:background="@color/color_orange" />
+
+        <TextView
+            android:id="@+id/hong_huang_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/huang_line"
+            android:text="0/0"
+            android:textColor="@color/color_63"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</LinearLayout>

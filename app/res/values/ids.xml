@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="gridview" />
+    <item type="id" name="webview" />
+    <item type="id" name="scrollview" />
+<!-- ID used when defining the content layout in XML. -->
+    <item name="mdContent" type="id" />
+
+    <!-- ID used when defining the menu layout in XML. -->
+    <item name="mdMenu" type="id" />
+
+    <!-- The ID of the content container. -->
+    <item name="md__content" type="id" />
+
+    <!-- The ID of the menu container. -->
+    <item name="md__menu" type="id" />
+
+    <!-- The ID of the drawer. -->
+    <item name="md__drawer" type="id" />
+
+    <!-- Used with View#setTag(int) to specify a position for the active view. -->
+    <item name="mdActiveViewPosition" type="id" />
+</resources>
